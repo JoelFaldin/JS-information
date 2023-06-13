@@ -1,7 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <title>Info About JavaScript!</title>
+
+    <nav id="navbar">
+        <header>In this small webpage we will describe Javascript, a worldwide prorgamming language used for interactive web design.</header>
+        <ul>
+            <li><a class="nav-link" href="#intro" target="_self">Introduction</a></li>
+            <li><a class="nav-link" href="#java" target="_self">Javascript</a></li>
+            <li><a class="nav-link" href="#print" target="_self">How to print things</a></li>
+            <li><a class="nav-link" href="#var" target="_self">Variables</a></li>
+            <li><a class="nav-link" href="#datatypes" target="_self">Datatypes</a></li>
+        </ul>
+    </nav>
+
 </head>
 
 <body>
@@ -11,14 +25,22 @@
         <section class="main-section" id="intro">
             <h1>Introduction</h1>
             <p>Javascript (JS) is a lightweight language used mainly for the logic area of web development, alongside
-                its brother Typescript (TS). They are very similar with each other: while javascript is used for
-                interactive web pages, typescript is strongly typed and can check errors when assigning types.
+                its brother Typescript (TS). They are very similar with each other: while JS is used for
+                interactive web pages, TS is strongly typed and can check errors when assigning types.
             </p>
             <p>Here are some frameworks that use either JS or TS:</p>
             <ul>
                 <li>React</li>
                 <li>Angular</li>
                 <li>Meteor</li>
+            </ul>
+            <p>But, what are the differences between JS and TS? Here we have the most important ones:</p>
+            <ul>
+                <li>TS is a 'superset' of JS, which means it understands all JS features and include new ones.</li>
+                <li>TS needs to be compiled to JS before it can run.</li>
+                <li>TS is strongly typed, this means you must exlpicitly declare the datatypes when creating a variable,
+                    and they can not be changed. On the other hand, JS is dynamically typed: you dont need to declare the
+                    datatype and it can be changed anywhere.</li>
             </ul>
         </section>
 
@@ -36,9 +58,10 @@
             <h1>How to print things</h1>
             <p>Although JS is called 'begginer friendly' by some people, things get harder the more you dive into it. To
                 make it simple, we will print a single line:</p>
-            <pre>console.log("Hello World!")
-        </pre>
-            <p>You can try coping and pasting it in a online JS compiler.</p>
+            <code>
+                console.log("Hello World!")
+            </code>
+            <p>You can try coping and pasting it in an online JS compiler.</p>
         </section>
 
         <section class="main-section" id="var">
@@ -47,15 +70,41 @@
             <p>You can start variables with letters, an underscore (_), a dollar sign ($), numbers (0-9), and because JS
                 is case-sensitive, we can go from "A" to "Z" and from "a" to "z". Those are a lot of possible variables!
             </p>
-            <pre>There are 3 ways of declaring a variable:
-        </pre>
+            <p>There are 3 ways of declaring a variable:</p>
+            <p>The first one is by using the 'var' keyword. It declares the variably both globally and locally:</p>
+            <code>var x = 42;</code>
+            <p>The second way is by the 'let' keyword. It declares the variable as
+            '<a href="https://www.geeksforgeeks.org/javascript-es2015-block-scoping/" target="_blank">block scoped</a>':</p>
+            <code>let x = 12;</code>
+            <p>And lastly, we can just asign a varibale:</p>
+            <code>x = 42;</code>
+            <p>Note that this last way of declaring a variable will give us a JS error and we should not use it.</p>
         </section>
 
         <section class="main-section" id="datatypes">
             <h1>Datatypes</h1>
+            <p>A datatype gives us details about the variable we are using. It is universally important in all programming
+            languages, and JS features 8 different datatypes:</p>
+            <ul>
+                <li>String ("Hello world!")</li>
+                <li>Number (from 9 to 3.14159)</li>
+                <li>Bigint (a very large number)</li>
+                <li>Boolean (true or false)</li>
+                <li>Undefined (literally undefined)</li>
+                <li>Null (different from null or NULL)</li>
+                <li>Symbol (guaranteed to be unique)</li>
+                <li>Object (it can be an objet, an array or a date)</li>
+            </ul>
+            <p>Some characteristics of JS makes datatypes interact in different ways.</p>
+            <p>For example, when adding a number to a string, JS will work with the number as a string:</p>
+            <code>let x = 16 + "keybards"<br>
+                console.log(x)
+            </code>
+            <p>If we compile this, we will get the result <code>16car</code>.</p>
         </section>
 
     </main>
 </body>
 
 </html>
+
